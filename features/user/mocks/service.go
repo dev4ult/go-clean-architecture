@@ -21,7 +21,7 @@ func (us *MockService) FetchAll() ([]dto.UserResponse, string) {
 
 
 func (us *MockService) CreateUser(input dto.UserInput) (*dto.UserResponse, string) {
-	users := []entity.UserEntity{
+	users := []entity.User{
 		{ID: 1, Username: "sarbinus", Email: "sarbin@example.com", Password: "sarbin123"},
 	}
 

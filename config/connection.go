@@ -56,5 +56,5 @@ func loadConfig() Config {
 }
 
 func autoMigrate(db *gorm.DB) {
-	db.AutoMigrate(&user.UserEntity{})
+	db.AutoMigrate(&user.User{})
 }

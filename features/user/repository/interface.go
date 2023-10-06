@@ -7,10 +7,10 @@ import (
 )
 
 type Repository interface {
-	Insert(input entity.UserEntity) (*entity.UserEntity, error)
-	SelectAll() ([]entity.UserEntity, error)
-	SelectById(userId int) (*entity.UserEntity, error)
-	SelectByUsername(username string) (*entity.UserEntity, error)
+	Insert(input entity.User) (*entity.User, error)
+	SelectAll() ([]entity.User, error)
+	SelectById(userId int) (*entity.User, error)
+	SelectByUsername(username string) (*entity.User, error)
 }
 
 type userRepo struct {

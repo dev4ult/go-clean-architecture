@@ -2,7 +2,7 @@ package entity
 
 import "gorm.io/gorm"
 
-type UserEntity struct {
+type User struct {
 	gorm.Model
 	ID int `gorm:"type:int(11)"`
 	Username string `gorm:"varchar(255)"`

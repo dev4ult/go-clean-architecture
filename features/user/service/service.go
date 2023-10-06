@@ -36,11 +36,11 @@ func (us *userService) CreateUser(input dto.UserInput) (*dto.UserResponse, strin
 		return nil, err.Error()
 	}
 
-	if *user != (entity.UserEntity{}) {
+	if *user != (entity.User{}) {
 		return nil, "User Has Already Exist!"
 	}
 
-	var userEntity entity.UserEntity
+	var userEntity entity.User
 	errMappingDto := smapping.FillStruct(&userEntity, smapping.MapFields(&input))
 
 	if errMappingDto != nil {
