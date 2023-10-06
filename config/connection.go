@@ -1,7 +1,7 @@
 package config
 
 import (
-	user "clean_arch/features/user/entity"
+	entity "clean_arch/features/user/entity"
 	"fmt"
 	"os"
 	"strconv"
@@ -58,5 +58,5 @@ func loadConfig() Config {
 }
 
 func autoMigrate(db *gorm.DB) {
-	db.AutoMigrate(&user.User{})
+	db.AutoMigrate(&entity.User{})
 }
